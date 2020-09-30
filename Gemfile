@@ -60,3 +60,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem "fog-aws"
   gem "figaro"
   gem "mini_magick"
+  gem 'devise'

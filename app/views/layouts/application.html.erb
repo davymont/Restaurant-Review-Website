@@ -10,6 +10,8 @@
   <body>
     <%= render 'layouts/navbar' %>
     <div class="container-fluid">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p> <!--enable us to send alerts to users (from devise)-->
     <%= yield %>
     <%= render 'layouts/footer' %>
   </div>
