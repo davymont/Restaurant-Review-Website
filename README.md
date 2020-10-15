@@ -6,4 +6,4 @@ A sample application to learn Ruby on Rails, with a view to building an online m
 
 Hosted at https://floating-dawn-73551.herokuapp.com/
 
-# Yelp-like-website
+# Restaurant Review Website
