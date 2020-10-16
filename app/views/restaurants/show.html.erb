@@ -6,6 +6,11 @@
   <%= @restaurant.name %>
 </h2>
 
+<div class="star-rating" data-score= <%= @avg_rating %> ></div>
+
+<p>Avg Rating: <%= @avg_rating %></p>
+<p> <%= "#{@reviews.length} reviews" %></p>
+
 <p>
   <strong>Address:</strong>
   <%= @restaurant.address %>
@@ -26,15 +31,34 @@
 	
 	<div class="col-md-9">
 	<% if @reviews.blank? %>
-	<h3>No reivews yet. Be the first to write one!</h3>
+	<h3>No reviews yet. Be the first to write one!</h3>
 	<% else %>
-<% @reviews.each do |review| %>
-<p><%= review.rating %></p>
-<p><%= review.command %></p>
-<% end %>
+	<table class="table">
+		<tbody>
+			<% @reviews.each do |review| %>
+			<tr>
+				<td>
+					<div class="star-rating" data-score= <%= review.rating %> > </div>
+						<p><%= review.rating %></p>
+						<p><%= h(review.command).gsub(/\n/, '<br/>').html_safe %></p>
+				</td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
 	<% end %>
 	</div>
 </div>
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant), class: "btn btn-link" %> |
 <%= link_to 'Back', restaurants_path, class: "btn btn-link" %>
+
+<script>
+	$('.star-rating').raty({
+		path: 'https://yelpdemobucket.s3.eu-west-2.amazonaws.com/stars',
+		readOnly: true;
+		score: function() {
+			return $(this).attr('data-score');
+		}
+	});
+</script>
