@@ -1,25 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My take on a 'Yelp' like website to review local eateries.
 
-Things you may want to cover:
+A sample application to learn Ruby on Rails, with a view to building an online marketplace.
 
-* Ruby version
+Hosted at https://floating-dawn-73551.herokuapp.com/
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# Yelpdemo
+# Restaurant Review Website
